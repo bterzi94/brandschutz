@@ -103,25 +103,32 @@
       text-align: center;
       position: relative; overflow: hidden;
     }
-    .hero::before {
-      content: '';
-      position: absolute; inset: 0; z-index: 0;
-      background-image: repeating-linear-gradient(
-        -45deg,
-        transparent,
-        transparent 12px,
-        rgba(0,24,48,.07) 12px,
-        rgba(0,24,48,.07) 13px
-      );
-      pointer-events: none;
-      mask-image: radial-gradient(ellipse 90% 90% at 50% 50%, black 20%, transparent 100%);
-      -webkit-mask-image: radial-gradient(ellipse 90% 90% at 50% 50%, black 20%, transparent 100%);
+    .hero-blob {
+      position: absolute; border-radius: 50%;
+      filter: blur(90px); pointer-events: none; z-index: 0;
+      animation: blobDrift ease-in-out infinite alternate;
     }
-    .hero-glow {
-      position: absolute; top: -60px; left: 50%; transform: translateX(-50%);
-      width: 900px; height: 550px;
-      background: radial-gradient(ellipse, rgba(240,72,24,.06) 0%, transparent 65%);
-      pointer-events: none;
+    .hero-blob-1 {
+      width: 520px; height: 420px;
+      background: rgba(240,72,24,.13);
+      top: -120px; left: -80px;
+      animation-duration: 14s;
+    }
+    .hero-blob-2 {
+      width: 440px; height: 380px;
+      background: rgba(0,90,200,.09);
+      top: 30px; right: -100px;
+      animation-duration: 18s; animation-delay: -7s;
+    }
+    .hero-blob-3 {
+      width: 360px; height: 300px;
+      background: rgba(255,150,40,.09);
+      bottom: -60px; left: 35%;
+      animation-duration: 16s; animation-delay: -3s;
+    }
+    @keyframes blobDrift {
+      0%   { transform: translate(0, 0) scale(1); }
+      100% { transform: translate(35px, 25px) scale(1.07); }
     }
     .hero-inner { position: relative; z-index: 1; max-width: 860px; margin: 0 auto; }
 
@@ -563,7 +570,9 @@
 
 <!-- ── HERO ── -->
 <section class="hero" id="hero">
-  <div class="hero-glow"></div>
+  <div class="hero-blob hero-blob-1"></div>
+  <div class="hero-blob hero-blob-2"></div>
+  <div class="hero-blob hero-blob-3"></div>
   <div class="hero-inner">
 
     <div class="hero-tag">
