@@ -222,8 +222,8 @@
     .problem-card h3 { font-size: 15px; font-weight: 700; margin-bottom: 8px; color: var(--navy); }
     .problem-card p  { font-size: 13px; color: var(--muted); line-height: 1.55; }
 
-    /* ─────────── EMPATHY (NAVY) ─────────── */
-    .empathy { background: var(--navy); padding: 80px 24px; color: var(--white); }
+    /* ─────────── EMPATHY ─────────── */
+    .empathy { background: #edf4fb; padding: 80px 24px; }
     .empathy-inner {
       max-width: 960px; margin: 0 auto;
       display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center;
@@ -234,16 +234,17 @@
     }
     .empathy h2 {
       font-size: clamp(26px, 3.5vw, 40px); font-weight: 700;
-      line-height: 1.15; letter-spacing: -.02em; margin-bottom: 20px;
+      line-height: 1.15; letter-spacing: -.02em; color: var(--navy); margin-bottom: 20px;
     }
     .empathy h2 em { font-style: normal; color: var(--orange); }
-    .empathy p { font-size: 15px; color: var(--muted-dark); line-height: 1.7; margin-bottom: 14px; }
+    .empathy p { font-size: 15px; color: var(--muted); line-height: 1.7; margin-bottom: 14px; }
     .empathy-quote {
       padding: 24px; border-radius: 16px;
-      background: rgba(255,255,255,.06);
+      background: var(--white);
       border-left: 3px solid var(--orange);
+      box-shadow: 0 2px 12px rgba(0,24,48,.07);
     }
-    .empathy-quote p { font-size: 15px; color: rgba(255,255,255,.85); line-height: 1.65; margin: 0; font-style: italic; }
+    .empathy-quote p { font-size: 15px; color: var(--muted); line-height: 1.65; margin: 0; font-style: italic; }
     .empathy-quote-author { margin-top: 12px; font-size: 13px; font-weight: 600; color: var(--orange); font-style: normal; }
 
     /* ─────────── SOLUTION (GRAY) ─────────── */
@@ -676,7 +677,7 @@
         und oft bereits von Fachplanern oder Behörden in Fachsprache überhäuft,
         ohne wirkliche Orientierung zu erhalten.
       </p>
-      <p style="color:rgba(255,255,255,.95); font-weight:600; font-size:16px;">
+      <p style="color:var(--navy); font-weight:600; font-size:16px;">
         Unser Job ist es, Ihnen genau diese Orientierung zu geben.
       </p>
     </div>
