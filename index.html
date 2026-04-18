@@ -99,7 +99,7 @@
     /* ─────────── HERO ─────────── */
     .hero {
       padding: 72px 24px 64px;
-      background: var(--white);
+      background: #080e1c;
       text-align: center;
       position: relative; overflow: hidden;
     }
@@ -144,7 +144,7 @@
     .hero-grain {
       position: absolute; inset: 0; z-index: 1; pointer-events: none;
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
-      opacity: 0.6; mix-blend-mode: overlay;
+      opacity: 0.35; mix-blend-mode: soft-light;
     }
     @-webkit-keyframes blobDrift {
       0%   { transform: translate3d(0, 0, 0) scale(1); }
@@ -159,22 +159,22 @@
     .hero-tag {
       display: inline-flex; align-items: center; gap: 8px;
       padding: 6px 16px; border-radius: 100000px;
-      border: 1px solid rgba(0,135,90,.2); background: #e6f4ee;
-      font-size: 12px; font-weight: 700; color: #00875a;
+      border: 1px solid rgba(0,220,120,.25); background: rgba(0,180,90,.12);
+      font-size: 12px; font-weight: 700; color: #2ddb8a;
       text-transform: uppercase; letter-spacing: 0.06em;
       margin-bottom: 28px;
     }
-    .hero-tag-dot { width: 6px; height: 6px; border-radius: 50%; background: #00875a; }
+    .hero-tag-dot { width: 6px; height: 6px; border-radius: 50%; background: #2ddb8a; }
 
     .hero h1 {
       font-size: clamp(36px, 6vw, 72px);
       font-weight: 700; line-height: 1.05; letter-spacing: -0.025em;
-      color: var(--navy); margin-bottom: 20px;
+      color: var(--white); margin-bottom: 20px;
     }
     .hero h1 .accent { color: var(--orange); }
 
     .hero-sub {
-      font-size: 18px; line-height: 1.6; color: var(--muted);
+      font-size: 18px; line-height: 1.6; color: rgba(255,255,255,.6);
       max-width: 580px; margin: 0 auto 36px;
     }
 
@@ -189,14 +189,14 @@
     }
     .trust-item {
       display: flex; align-items: center; gap: 7px;
-      font-size: 13px; font-weight: 600; color: var(--muted);
+      font-size: 13px; font-weight: 600; color: rgba(255,255,255,.55);
     }
     .trust-check {
       width: 18px; height: 18px; border-radius: 50%;
-      background: #e6f4ee; display: flex; align-items: center; justify-content: center;
+      background: rgba(0,180,90,.2); display: flex; align-items: center; justify-content: center;
       flex-shrink: 0;
     }
-    .trust-check svg { color: #00875a; }
+    .trust-check svg { color: #2ddb8a; }
 
     /* ─────────── URGENCY ─────────── */
     .urgency { padding: 32px 24px; background: var(--white); }
