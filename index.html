@@ -444,7 +444,7 @@
     .form-disclaimer { font-size: 12px; color: var(--muted); margin-top: 12px; text-align: center; line-height: 1.5; }
 
     /* ─────────── FOOTER ─────────── */
-    footer { background: var(--navy); color: var(--muted-dark); padding: 40px 48px 28px; }
+    footer { background: var(--gray); color: var(--muted); padding: 40px 48px 28px; border-top: 1px solid var(--border); }
     .footer-inner { max-width: 1080px; margin: 0 auto; }
     .footer-top {
       display: flex; align-items: flex-start; justify-content: space-between;
@@ -452,13 +452,13 @@
     }
     .footer-logo img { height: 32px; width: auto; }
     .footer-links { display: flex; gap: 24px; flex-wrap: wrap; }
-    .footer-links a { font-size: 13px; color: rgba(255,255,255,.35); text-decoration: none; transition: color .15s; }
-    .footer-links a:hover { color: var(--white); }
-    .footer-divider { border: none; border-top: 1px solid var(--border-dark); margin-bottom: 20px; }
-    .footer-disclaimer { font-size: 12px; color: rgba(255,255,255,.3); line-height: 1.7; max-width: 840px; }
-    .footer-disclaimer strong { color: rgba(255,255,255,.45); }
+    .footer-links a { font-size: 13px; color: var(--muted); text-decoration: none; transition: color .15s; }
+    .footer-links a:hover { color: var(--navy); }
+    .footer-divider { border: none; border-top: 1px solid var(--border); margin-bottom: 20px; }
+    .footer-disclaimer { font-size: 12px; color: var(--muted); line-height: 1.7; max-width: 840px; opacity: .7; }
+    .footer-disclaimer strong { color: var(--navy); }
     .footer-bottom { margin-top: 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }
-    .footer-copy { font-size: 12px; }
+    .footer-copy { font-size: 12px; color: var(--muted); }
 
     /* ─────────── SCROLL TOP ─────────── */
     .scroll-top {
@@ -958,7 +958,7 @@
   <div class="footer-inner">
     <div class="footer-top">
       <a href="#" class="footer-logo">
-        <img src="assets/images/logo-frei.svg" alt="BrandSchutz Beratung" />
+        <img src="assets/images/Logo.svg" alt="BrandSchutz Beratung" />
       </a>
       <div class="footer-links">
         <a href="#">Impressum</a>
