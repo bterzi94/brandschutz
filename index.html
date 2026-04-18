@@ -424,6 +424,22 @@
     .footer-bottom { margin-top: 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }
     .footer-copy { font-size: 12px; }
 
+    /* ─────────── SCROLL TOP ─────────── */
+    .scroll-top {
+      position: fixed; bottom: 24px; right: 24px; z-index: 200;
+      width: 44px; height: 44px; border-radius: 50%;
+      background: var(--navy); color: var(--white);
+      border: none; cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 4px 16px rgba(0,0,0,.2);
+      opacity: 0; pointer-events: none;
+      transform: translateY(8px);
+      transition: opacity .3s, transform .3s;
+    }
+    .scroll-top.visible { opacity: 1; pointer-events: auto; transform: translateY(0); }
+    .scroll-top:hover { background: var(--navy-mid); }
+    @media (max-width: 640px) { .scroll-top { display: none; } }
+
     /* ─────────── FLOATING ─────────── */
     .floating-cta {
       position: fixed; bottom: 20px; left: 0; right: 0; z-index: 200;
@@ -919,6 +935,13 @@
   </div>
 </footer>
 
+<!-- ── SCROLL TOP ── -->
+<button class="scroll-top" id="scrollTop" aria-label="Nach oben">
+  <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+    <path d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"/>
+  </svg>
+</button>
+
 <!-- ── FLOATING CTA ── -->
 <div class="floating-cta">
   <a href="tel:+492151000000" class="float-btn float-phone">
@@ -941,6 +964,12 @@
   );
   observer.observe(hero);
   document.getElementById('year').textContent = new Date().getFullYear();
+
+  const scrollBtn = document.getElementById('scrollTop');
+  window.addEventListener('scroll', () => {
+    scrollBtn.classList.toggle('visible', window.scrollY > 400);
+  });
+  scrollBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 </script>
 </body>
 </html>
