@@ -154,18 +154,28 @@
     .trust-check svg { color: #00875a; }
 
     /* ─────────── URGENCY ─────────── */
-    .urgency {
-      background: var(--navy);
-      padding: 36px 24px;
-      text-align: center;
+    .urgency { padding: 32px 24px; background: var(--white); }
+    .urgency-inner {
+      max-width: 860px; margin: 0 auto;
+      display: flex; align-items: flex-start; gap: 20px;
+      padding: 24px 28px; border-radius: 16px;
+      background: #fff8f6;
+      border: 1.5px solid rgba(240,72,24,.25);
+      box-shadow: 0 2px 12px rgba(240,72,24,.08);
     }
-    .urgency-inner { max-width: 760px; margin: 0 auto; }
+    .urgency-icon {
+      font-size: 28px; line-height: 1; flex-shrink: 0; margin-top: 2px;
+    }
+    .urgency-body { flex: 1; }
     .urgency h2 {
-      font-size: 22px; font-weight: 700; color: var(--white);
-      margin-bottom: 10px; line-height: 1.3;
+      font-size: 17px; font-weight: 700; color: var(--navy);
+      margin-bottom: 6px; line-height: 1.3;
     }
     .urgency h2 span { color: var(--orange); }
-    .urgency p { font-size: 15px; color: var(--muted-dark); line-height: 1.6; margin-bottom: 24px; }
+    .urgency p { font-size: 14px; color: var(--muted); line-height: 1.6; margin-bottom: 16px; }
+    @media (max-width: 640px) {
+      .urgency-inner { flex-direction: column; gap: 12px; padding: 20px; }
+    }
 
     /* ─────────── SECTIONS ─────────── */
     .section { padding: 80px 24px; }
@@ -425,7 +435,21 @@
     .float-phone { background: var(--navy); }
     .float-form  { background: var(--orange); }
     @media (max-width: 640px) {
-      .floating-cta { display: flex; }
+      .floating-cta {
+        display: flex;
+        flex-direction: row;
+        bottom: 0; left: 0; right: 0;
+        padding: 12px 16px 20px;
+        gap: 10px;
+        background: linear-gradient(to top, rgba(0,0,0,.18) 0%, transparent 100%);
+      }
+      .float-btn {
+        flex: 1;
+        justify-content: center;
+        padding: 15px 12px;
+        font-size: 15px;
+        border-radius: 14px;
+      }
     }
 
     /* ─────────── RESPONSIVE ─────────── */
@@ -554,13 +578,16 @@
 <!-- ── URGENCY ── -->
 <div class="urgency">
   <div class="urgency-inner">
-    <h2>⚠️ <span>Nutzungsuntersagung</span> erhalten?</h2>
-    <p>
-      Wenn Ihre Wohnungen gesperrt wurden, läuft die Uhr. Viele Eigentümer verlieren wertvolle Zeit,
-      weil sie nicht wissen, an wen sie sich zuerst wenden sollen.
-      Wir schaffen schnell Klarheit — damit Sie wieder handlungsfähig werden.
-    </p>
-    <a href="#kontakt" class="btn btn-orange btn-lg">Jetzt Ersteinschätzung sichern</a>
+    <div class="urgency-icon">⚠️</div>
+    <div class="urgency-body">
+      <h2><span>Nutzungsuntersagung</span> erhalten?</h2>
+      <p>
+        Wenn Ihre Wohnungen gesperrt wurden, läuft die Uhr. Viele Eigentümer verlieren wertvolle Zeit,
+        weil sie nicht wissen, an wen sie sich zuerst wenden sollen.
+        Wir schaffen schnell Klarheit — damit Sie wieder handlungsfähig werden.
+      </p>
+      <a href="#kontakt" class="btn btn-orange">Jetzt Ersteinschätzung sichern</a>
+    </div>
   </div>
 </div>
 
