@@ -105,7 +105,6 @@
     }
     .hero-blobs {
       position: absolute; inset: 0; z-index: 0; pointer-events: none;
-      -webkit-filter: blur(80px); filter: blur(80px);
     }
     .hero-blob {
       position: absolute; border-radius: 50%;
@@ -121,11 +120,11 @@
     .hero-blob-4 { width: 500px; height: 400px; top: 20px; left: 28%; animation-duration: 4.5s; animation-delay: -2s; }
     .hero-blob-5 { width: 420px; height: 360px; bottom: -40px; right: 5%; animation-duration: 5.5s; animation-delay: -0.5s; }
 
-    .hero-blob-1 .hero-blob-inner { background: rgba(220,20,10,.22); }
-    .hero-blob-2 .hero-blob-inner { background: rgba(255,210,0,.2); }
-    .hero-blob-3 .hero-blob-inner { background: rgba(240,72,24,.2); }
-    .hero-blob-4 .hero-blob-inner { background: rgba(255,120,0,.18); }
-    .hero-blob-5 .hero-blob-inner { background: rgba(255,50,0,.16); }
+    .hero-blob-1 .hero-blob-inner { background: radial-gradient(circle, rgba(220,20,10,.55) 0%, transparent 70%); }
+    .hero-blob-2 .hero-blob-inner { background: radial-gradient(circle, rgba(255,200,0,.5) 0%, transparent 70%); }
+    .hero-blob-3 .hero-blob-inner { background: radial-gradient(circle, rgba(240,72,24,.52) 0%, transparent 70%); }
+    .hero-blob-4 .hero-blob-inner { background: radial-gradient(circle, rgba(255,110,0,.48) 0%, transparent 70%); }
+    .hero-blob-5 .hero-blob-inner { background: radial-gradient(circle, rgba(255,40,0,.45) 0%, transparent 70%); }
     .hero-grain {
       position: absolute; inset: 0; z-index: 1; pointer-events: none;
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
