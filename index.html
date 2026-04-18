@@ -907,7 +907,7 @@
       entsprechend qualifizierten Fachplanern und zuständigen Behörden.
     </p>
     <div class="footer-bottom">
-      <span class="footer-copy">© 2024 BrandSchutz Beratung GmbH · Alle Rechte vorbehalten</span>
+      <span class="footer-copy">© <span id="year"></span> brandschutz-geloest.de · Alle Rechte vorbehalten</span>
     </div>
   </div>
 </footer>
@@ -933,6 +933,7 @@
     { threshold: 0 }
   );
   observer.observe(hero);
+  document.getElementById('year').textContent = new Date().getFullYear();
 </script>
 </body>
 </html>
