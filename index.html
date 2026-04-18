@@ -6,7 +6,7 @@
   <title>Brandschutz Ersteinschätzung – Kostenlos & Unverbindlich</title>
   <meta name="description" content="Nutzungsuntersagung oder Brandschutzproblem? Wir helfen Eigentümern schnell und unkompliziert. Kostenlose Ersteinschätzung anfragen." />
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
       --navy:         #001830;
@@ -104,14 +104,14 @@
       position: relative; overflow: hidden;
     }
     .hero::before {
-      content: ''; display: block; box-sizing: content-box; position: absolute; inset: 0; z-index: 0; pointer-events: none;
+      content: ''; display: block; position: absolute; inset: 0; z-index: 0; pointer-events: none;
       background: radial-gradient(ellipse at 10% 100%, rgba(220,20,10,.45) 0%, transparent 45%),
                   radial-gradient(ellipse at 90% 100%, rgba(255,130,0,.38) 0%, transparent 40%);
       -webkit-animation: fireFlicker1 2.8s ease-in-out infinite alternate;
       animation: fireFlicker1 2.8s ease-in-out infinite alternate;
     }
     .hero::after {
-      content: ''; display: block; box-sizing: content-box; position: absolute; inset: 0; z-index: 0; pointer-events: none;
+      content: ''; display: block; position: absolute; inset: 0; z-index: 0; pointer-events: none;
       background: radial-gradient(ellipse at 50% 110%, rgba(255,80,0,.35) 0%, transparent 50%),
                   radial-gradient(ellipse at 15% 0%, rgba(200,10,0,.2) 0%, transparent 35%),
                   radial-gradient(ellipse at 85% 0%, rgba(255,160,0,.18) 0%, transparent 35%);
