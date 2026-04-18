@@ -103,40 +103,32 @@
       text-align: center;
       position: relative; overflow: hidden;
     }
-    .hero-blobs {
-      position: absolute; inset: 0; z-index: 0; pointer-events: none;
+    .hero::before {
+      content: ''; position: absolute; inset: 0; z-index: 0; pointer-events: none;
+      background: radial-gradient(ellipse at 25% 60%, rgba(220,20,10,.28) 0%, transparent 55%),
+                  radial-gradient(ellipse at 75% 35%, rgba(255,130,0,.22) 0%, transparent 50%),
+                  radial-gradient(ellipse at 55% 80%, rgba(255,200,0,.16) 0%, transparent 45%);
+      -webkit-animation: fireFlicker1 3.5s ease-in-out infinite alternate;
+      animation: fireFlicker1 3.5s ease-in-out infinite alternate;
     }
-    .hero-blob {
-      position: absolute; border-radius: 50%;
-      will-change: transform;
-      -webkit-animation: blobDrift ease-in-out infinite alternate;
-      animation: blobDrift ease-in-out infinite alternate;
+    .hero::after {
+      content: ''; position: absolute; inset: 0; z-index: 0; pointer-events: none;
+      background: radial-gradient(ellipse at 70% 65%, rgba(240,72,24,.24) 0%, transparent 50%),
+                  radial-gradient(ellipse at 30% 30%, rgba(255,80,0,.18) 0%, transparent 48%);
+      -webkit-animation: fireFlicker2 4.2s ease-in-out infinite alternate;
+      animation: fireFlicker2 4.2s ease-in-out infinite alternate;
     }
-    .hero-blob-inner { width: 100%; height: 100%; border-radius: 50%; }
-
-    .hero-blob-1 { width: 700px; height: 580px; top: -160px; left: -140px; animation-duration: 5s; }
-    .hero-blob-2 { width: 620px; height: 500px; top: -80px; right: -140px; animation-duration: 4s; animation-delay: -1.5s; }
-    .hero-blob-3 { width: 540px; height: 440px; bottom: -80px; left: 15%; animation-duration: 6s; animation-delay: -1s; }
-    .hero-blob-4 { width: 500px; height: 400px; top: 20px; left: 28%; animation-duration: 4.5s; animation-delay: -2s; }
-    .hero-blob-5 { width: 420px; height: 360px; bottom: -40px; right: 5%; animation-duration: 5.5s; animation-delay: -0.5s; }
-
-    .hero-blob-1 .hero-blob-inner { background: radial-gradient(circle, rgba(220,20,10,.55) 0%, transparent 70%); }
-    .hero-blob-2 .hero-blob-inner { background: radial-gradient(circle, rgba(255,200,0,.5) 0%, transparent 70%); }
-    .hero-blob-3 .hero-blob-inner { background: radial-gradient(circle, rgba(240,72,24,.52) 0%, transparent 70%); }
-    .hero-blob-4 .hero-blob-inner { background: radial-gradient(circle, rgba(255,110,0,.48) 0%, transparent 70%); }
-    .hero-blob-5 .hero-blob-inner { background: radial-gradient(circle, rgba(255,40,0,.45) 0%, transparent 70%); }
-    .hero-grain {
-      position: absolute; inset: 0; z-index: 1; pointer-events: none;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
-      opacity: 0.35; mix-blend-mode: soft-light;
+    @-webkit-keyframes fireFlicker1 {
+      0%   { opacity: .5; }  100% { opacity: 1; }
     }
-    @-webkit-keyframes blobDrift {
-      0%   { transform: translate3d(0, 0, 0) scale(1); }
-      100% { transform: translate3d(45px, 35px, 0) scale(1.1); }
+    @keyframes fireFlicker1 {
+      0%   { opacity: .5; }  100% { opacity: 1; }
     }
-    @keyframes blobDrift {
-      0%   { transform: translate3d(0, 0, 0) scale(1); }
-      100% { transform: translate3d(45px, 35px, 0) scale(1.1); }
+    @-webkit-keyframes fireFlicker2 {
+      0%   { opacity: 1; }   100% { opacity: .4; }
+    }
+    @keyframes fireFlicker2 {
+      0%   { opacity: 1; }   100% { opacity: .4; }
     }
     .hero-inner { position: relative; z-index: 1; max-width: 860px; margin: 0 auto; }
 
@@ -584,14 +576,6 @@
 
 <!-- ── HERO ── -->
 <section class="hero" id="hero">
-  <div class="hero-blobs">
-    <div class="hero-blob hero-blob-1"><div class="hero-blob-inner"></div></div>
-    <div class="hero-blob hero-blob-2"><div class="hero-blob-inner"></div></div>
-    <div class="hero-blob hero-blob-3"><div class="hero-blob-inner"></div></div>
-    <div class="hero-blob hero-blob-4"><div class="hero-blob-inner"></div></div>
-    <div class="hero-blob hero-blob-5"><div class="hero-blob-inner"></div></div>
-  </div>
-  <div class="hero-grain"></div>
   <div class="hero-inner">
 
     <div class="hero-tag">
