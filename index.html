@@ -896,30 +896,31 @@
     <div class="form-card">
       <h3>Kostenlose Ersteinschätzung</h3>
       <p>Ausfüllen dauert 2 Minuten. Wir melden uns innerhalb von 24 Stunden.</p>
-      <form onsubmit="return false;">
+      <form action="https://submit-form.com/jNCqEE9dc" method="POST">
+        <input type="hidden" name="_gotcha" style="display:none" />
         <div class="form-row">
           <div class="form-group">
             <label for="vorname">Vorname</label>
-            <input type="text" id="vorname" placeholder="Max" />
+            <input type="text" id="vorname" name="vorname" placeholder="Max" required />
           </div>
           <div class="form-group">
             <label for="nachname">Nachname</label>
-            <input type="text" id="nachname" placeholder="Mustermann" />
+            <input type="text" id="nachname" name="nachname" placeholder="Mustermann" />
           </div>
         </div>
         <div class="form-row">
           <div class="form-group">
             <label for="telefon">Telefon</label>
-            <input type="tel" id="telefon" placeholder="+49 30 ..." />
+            <input type="tel" id="telefon" name="telefon" placeholder="+49 30 ..." />
           </div>
           <div class="form-group">
             <label for="email">E-Mail</label>
-            <input type="email" id="email" placeholder="max@beispiel.de" />
+            <input type="email" id="email" name="email" placeholder="max@beispiel.de" required />
           </div>
         </div>
         <div class="form-group">
           <label for="situation">Meine Situation</label>
-          <select id="situation">
+          <select id="situation" name="situation">
             <option value="">Bitte wählen …</option>
             <option>Nutzungsuntersagung erhalten</option>
             <option>Begehung durch Behörde angekündigt</option>
@@ -932,7 +933,7 @@
         </div>
         <div class="form-group">
           <label for="nachricht">Kurze Beschreibung (optional)</label>
-          <textarea id="nachricht" placeholder="Was ist passiert? Welche Frist läuft? Je mehr Sie uns erzählen, desto gezielter können wir helfen."></textarea>
+          <textarea id="nachricht" name="nachricht" placeholder="Was ist passiert? Welche Frist läuft? Je mehr Sie uns erzählen, desto gezielter können wir helfen."></textarea>
         </div>
         <div class="form-consent">
           <input type="checkbox" id="datenschutz-consent" required />
