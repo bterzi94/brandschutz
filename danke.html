@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Anfrage erhalten – brandschutz-geloest.de</title>
+  <meta name="robots" content="noindex, follow" />
+  <link rel="icon" type="image/png" href="assets/images/favicon.png" />
+  <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy:   #001830;
+      --orange: #f04818;
+      --white:  #ffffff;
+      --muted:  #4a5568;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif;
+      background: #080e1c;
+      color: var(--white);
+      -webkit-font-smoothing: antialiased;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 24px;
+    }
+    .icon {
+      width: 72px; height: 72px; border-radius: 50%;
+      background: rgba(0,180,90,.15);
+      border: 2px solid rgba(0,180,90,.35);
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 28px;
+    }
+    .icon svg { color: #2ddb8a; }
+    h1 {
+      font-size: clamp(28px, 5vw, 44px);
+      font-weight: 700; letter-spacing: -0.02em;
+      margin-bottom: 16px;
+    }
+    h1 span { color: var(--orange); }
+    p {
+      font-size: 18px; line-height: 1.6;
+      color: rgba(255,255,255,.6);
+      max-width: 480px; margin: 0 auto 36px;
+    }
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 14px 32px; border-radius: 56px;
+      background: var(--orange); color: var(--white);
+      font-size: 15px; font-weight: 600;
+      text-decoration: none; transition: background .18s;
+    }
+    .btn:hover { background: #d13a10; }
+    .logo {
+      position: fixed; top: 24px; left: 50%;
+      transform: translateX(-50%);
+    }
+    .logo img { height: 32px; width: auto; }
+  </style>
+</head>
+<body>
+
+  <a href="index.html" class="logo">
+    <img src="assets/images/logo-frei.svg" alt="brandschutz-geloest.de" />
+  </a>
+
+  <div class="icon">
+    <svg width="32" height="32" viewBox="0 0 16 16" fill="currentColor">
+      <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+    </svg>
+  </div>
+
+  <h1>Anfrage <span>erhalten!</span></h1>
+  <p>
+    Vielen Dank — wir haben Ihre Nachricht erhalten und melden uns
+    innerhalb von <strong style="color:#fff;">24 Stunden</strong> bei Ihnen.
+  </p>
+  <a href="index.html" class="btn">
+    ← Zurück zur Startseite
+  </a>
+
+</body>
+</html>
