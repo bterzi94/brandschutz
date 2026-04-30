@@ -34,6 +34,54 @@
     "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR", "description": "Kostenlose Ersteinschätzung" }
   }
   </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Was kostet eine Brandschutzberatung in Krefeld?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Die Brandschutz Ersteinschätzung ist für Sie vollständig kostenlos und unverbindlich. Erst wenn Sie sich für eine vertiefte Beratung, eine Vor-Ort-Begehung oder die Vermittlung an einen Fachplaner Brandschutz entscheiden, entstehen Kosten, die vorher transparent kommuniziert werden." }
+      },
+      {
+        "@type": "Question",
+        "name": "Was ist eine Nutzungsuntersagung — und was muss ich jetzt sofort tun?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Eine Nutzungsuntersagung ist eine behördliche Verfügung der Bauaufsicht, die die Nutzung Ihres Gebäudes untersagt, weil Brandschutzmängel festgestellt wurden. Prüfen Sie sofort die gesetzten Fristen der Bauaufsicht, lassen Sie die Mängel dokumentieren und holen Sie umgehend eine Brandschutz Ersteinschätzung ein. Das Ziel des Verfahrens ist die Nutzungsfreigabe nach Mängelbeseitigung." }
+      },
+      {
+        "@type": "Question",
+        "name": "Was passiert bei einer Begehung durch die Bauaufsicht in Krefeld?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Die Bauaufsicht prüft vor Ort, ob Ihr Gebäude den geltenden Brandschutzverordnungen des Landes NRW entspricht. Kontrolliert werden Fluchtwege, Feuerlöscher, Rauchmelder, Brandmeldeanlagen, Brand- und Rauchschutztüren, Feststellanlagen, Brandschutzklappen, Wandhydranten sowie die vorhandene Dokumentation wie Brandschutzordnung und Flucht- und Rettungspläne." }
+      },
+      {
+        "@type": "Question",
+        "name": "Was ist der Unterschied zwischen Brandschutzkonzept und Brandschutznachweis?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Das Brandschutzkonzept beschreibt, wie ein Gebäude die Schutzziele durch bauliche, technische und organisatorische Maßnahmen erfüllt — inklusive Brandmeldekonzept, Brandlastenermittlung und Evakuierungskonzepte. Der Brandschutznachweis ist die formale Dokumentation gegenüber der Behörde, dass das Konzept umgesetzt wurde. Beide werden von einem Sachverständigen für vorbeugenden Brandschutz oder einem Fachplaner Brandschutz erstellt." }
+      },
+      {
+        "@type": "Question",
+        "name": "Wie lange dauert es, eine Nutzungsuntersagung aufzuheben?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Das hängt vom Umfang der Mängel ab. Einfache Maßnahmen wie das Nachrüsten von Feuerlöschern oder Rauchmeldern sind in wenigen Tagen erledigt. Komplexere Maßnahmen wie Brandschutzklappen, Brandmeldeanlagen oder ein vollständiges Brandschutzkonzept dauern Wochen bis Monate. Nach Abschluss aller Maßnahmen folgen die baurechtliche Abnahme und die Nutzungsfreigabe." }
+      },
+      {
+        "@type": "Question",
+        "name": "Beraten Sie auch Altbauten, Denkmäler und Gewerbeobjekte in Krefeld?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Ja. Wir beraten Eigentümer aller Objektarten: Altbauten, Mehrfamilienhäuser, Gebäude unter Denkmalschutz, Industrie- und Logistikzentren, Chemie- und Gewerbeparks sowie Verkaufsstätten. Für Denkmalschutzgebäude vermitteln wir an Brandschutzingenieure, die kostenreduktive Brandschutzlösungen im Einklang mit den Denkmalsschutzauflagen entwickeln." }
+      },
+      {
+        "@type": "Question",
+        "name": "Was ist eine Technical Due Diligence (TDD) im Brandschutz?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Bei einer Technical Due Diligence (TDD) wird der brandschutztechnische Zustand einer Immobilie systematisch bewertet — typischerweise vor einem Kauf. Das Ergebnis ist eine Gebäudebewertung Brandschutz mit Kostenkalkulation und Kostenschätzung für alle notwendigen Maßnahmen." }
+      },
+      {
+        "@type": "Question",
+        "name": "Wann brauche ich einen externen Brandschutzbeauftragten?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Ein externer Brandschutzbeauftragter ist in Betrieben mit erhöhtem Brandrisiko sowie in vielen gewerblichen Gebäuden gesetzlich vorgeschrieben oder von Versicherungen gefordert. Er übernimmt dauerhaft die Verantwortung für alle Brandschutzmaßnahmen und ist die Grundlage für ein Brandschutz-Management-System im laufenden Betrieb." }
+      }
+    ]
+  }
+  </script>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -619,6 +667,32 @@
       .begehung-grid { grid-template-columns: 1fr; }
     }
 
+    /* ─────────── FAQ ─────────── */
+    .faq-section { background: var(--white); }
+    .faq-list { margin-top: 48px; border-top: 1px solid var(--border); }
+    .faq-item { border-bottom: 1px solid var(--border); }
+    .faq-question {
+      width: 100%; display: flex; align-items: center; justify-content: space-between;
+      gap: 16px; padding: 22px 0; background: none; border: none;
+      cursor: pointer; text-align: left; font-size: 16px; font-weight: 700;
+      color: var(--navy); font-family: inherit; transition: color .15s;
+    }
+    .faq-question:hover { color: var(--orange); }
+    .faq-question[aria-expanded="true"] { color: var(--orange); }
+    .faq-icon {
+      width: 28px; height: 28px; border-radius: 50%; flex-shrink: 0;
+      background: var(--gray); display: flex; align-items: center; justify-content: center;
+      transition: background .2s, transform .2s;
+    }
+    .faq-question[aria-expanded="true"] .faq-icon { background: var(--orange); transform: rotate(45deg); }
+    .faq-icon svg { color: var(--navy); transition: color .2s; }
+    .faq-question[aria-expanded="true"] .faq-icon svg { color: var(--white); }
+    .faq-answer { padding: 0 32px 22px 0; }
+    .faq-answer p { font-size: 15px; color: var(--muted); line-height: 1.75; margin-bottom: 10px; }
+    .faq-answer p:last-child { margin-bottom: 0; }
+    .faq-answer ul { margin: 8px 0 0 20px; display: flex; flex-direction: column; gap: 6px; }
+    .faq-answer ul li { font-size: 14px; color: var(--muted); line-height: 1.6; }
+
     /* ─────────── SEO TEXT ─────────── */
     .seo-text { background: var(--white); border-top: 1px solid var(--border); }
     .seo-block { padding: 32px 0; border-bottom: 1px solid var(--border); }
@@ -652,6 +726,7 @@
     <li><a href="#loesung">Unsere Lösung</a></li>
     <li><a href="#begehung">Vor-Ort-Begehung</a></li>
     <li><a href="#ablauf">Ablauf</a></li>
+    <li><a href="#faq">FAQ</a></li>
     <li><a href="#kontakt">Kontakt</a></li>
   </ul>
   <div class="nav-right">
@@ -1035,6 +1110,114 @@
   </div>
 </section>
 
+<!-- ── FAQ ── -->
+<section class="section faq-section" id="faq">
+  <div class="section-inner" style="max-width:860px;">
+    <div class="section-label">Häufige Fragen</div>
+    <h2 class="section-title">FAQ – Brandschutzberatung Krefeld</h2>
+    <p class="section-sub">
+      Die wichtigsten Fragen rund um Brandschutz, Nutzungsuntersagung und Beratung — kompakt und verständlich beantwortet.
+    </p>
+    <div class="faq-list">
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          Was kostet eine Brandschutzberatung in Krefeld?
+          <span class="faq-icon"><svg width="12" height="12" viewBox="0 0 16 16" fill="currentColor"><path d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2z"/></svg></span>
+        </button>
+        <div class="faq-answer" hidden>
+          <p>Die <strong>Brandschutz Ersteinschätzung</strong> ist für Sie vollständig kostenlos und unverbindlich — ohne versteckte Folgekosten. Erst wenn Sie sich bewusst für eine vertiefte Beratung, eine Vor-Ort-Begehung oder die Vermittlung an einen <strong>Fachplaner Brandschutz</strong> entscheiden, entstehen Kosten, die wir Ihnen vorher transparent kommunizieren.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          Was ist eine Nutzungsuntersagung — und was muss ich jetzt sofort tun?
+          <span class="faq-icon"><svg width="12" height="12" viewBox="0 0 16 16" fill="currentColor"><path d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2z"/></svg></span>
+        </button>
+        <div class="faq-answer" hidden>
+          <p>Eine Nutzungsuntersagung ist eine behördliche Verfügung der Bauaufsicht, die die Nutzung Ihres Gebäudes oder einzelner Einheiten untersagt, weil Brandschutzmängel festgestellt wurden. Sie ist kein endgültiges Urteil — sondern der Start eines definierten Prozesses, an dessen Ende die <strong>Nutzungsfreigabe</strong> steht.</p>
+          <p>Was Sie sofort tun sollten: Die gesetzten <strong>Fristen der Bauaufsicht</strong> genau prüfen, die Mängel dokumentieren lassen und umgehend eine <strong>Brandschutz Ersteinschätzung</strong> einholen. Je früher Sie handeln, desto mehr Optionen haben Sie.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          Was passiert bei einer Begehung durch die Bauaufsicht in Krefeld?
+          <span class="faq-icon"><svg width="12" height="12" viewBox="0 0 16 16" fill="currentColor"><path d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2z"/></svg></span>
+        </button>
+        <div class="faq-answer" hidden>
+          <p>Die Bauaufsicht prüft vor Ort, ob Ihr Gebäude den geltenden <strong>Brandschutzverordnungen</strong> des Landes NRW entspricht. Typischerweise werden kontrolliert:</p>
+          <ul>
+            <li>Fluchtwege, Treppenräume und Notausgänge</li>
+            <li>Feuerlöscher, Rauchmelder und Brandmeldeanlagen</li>
+            <li>Brand- und Rauchschutztüren sowie Feststellanlagen</li>
+            <li>Brandabschottungen, Brandschutzklappen und Wandhydranten</li>
+            <li>Vorhandene Dokumentation: Brandschutzordnung, Flucht- und Rettungspläne</li>
+          </ul>
+          <p>Gut vorbereitet in eine Begehung zu gehen macht einen entscheidenden Unterschied. Wir helfen Ihnen dabei.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          Was ist der Unterschied zwischen Brandschutzkonzept und Brandschutznachweis?
+          <span class="faq-icon"><svg width="12" height="12" viewBox="0 0 16 16" fill="currentColor"><path d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2z"/></svg></span>
+        </button>
+        <div class="faq-answer" hidden>
+          <p>Das <strong>Brandschutzkonzept</strong> beschreibt, wie ein Gebäude die Schutzziele des Brandschutzes durch bauliche, technische und organisatorische Maßnahmen erfüllt — inklusive <strong>Brandmeldekonzept</strong>, <strong>Brandlastenermittlung</strong> und <strong>Evakuierungs- und Räumungskonzepte</strong>.</p>
+          <p>Der <strong>Brandschutznachweis</strong> ist die formale Dokumentation gegenüber der Behörde, dass das Konzept tatsächlich umgesetzt wurde. Beide werden von einem <strong>Sachverständigen für vorbeugenden Brandschutz</strong> oder einem qualifizierten <strong>Fachplaner Brandschutz</strong> erstellt und von der <strong>Fachbauleitung Brandschutz</strong> begleitet.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          Wie lange dauert es, eine Nutzungsuntersagung aufzuheben?
+          <span class="faq-icon"><svg width="12" height="12" viewBox="0 0 16 16" fill="currentColor"><path d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2z"/></svg></span>
+        </button>
+        <div class="faq-answer" hidden>
+          <p>Das hängt direkt vom Umfang der festgestellten Mängel ab. Einfache Maßnahmen — wie das Nachrüsten von Feuerlöschern, Rauchmeldern oder die Kennzeichnung von Fluchtwegen — können innerhalb weniger Tage erledigt sein.</p>
+          <p>Komplexere Maßnahmen wie der Einbau von Brandschutzklappen, Brandmeldeanlagen, RWA-Anlagen oder die Erstellung eines vollständigen <strong>Brandschutzkonzepts</strong> können Wochen bis Monate in Anspruch nehmen. Nach Abschluss aller Maßnahmen folgt die <strong>baurechtliche Abnahme</strong> — und dann die <strong>Nutzungsfreigabe</strong>.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          Beraten Sie auch Altbauten, Denkmäler und Gewerbeobjekte in Krefeld?
+          <span class="faq-icon"><svg width="12" height="12" viewBox="0 0 16 16" fill="currentColor"><path d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2z"/></svg></span>
+        </button>
+        <div class="faq-answer" hidden>
+          <p>Ja. Wir beraten Eigentümer aller Objektarten: klassische <strong>Altbauten</strong> und <strong>Mehrfamilienhäuser</strong>, <strong>Gebäude unter Denkmalschutz</strong>, <strong>Industrie- und Logistikzentren</strong>, <strong>Chemie- und Gewerbeparks</strong> sowie <strong>Verkaufsstätten</strong>.</p>
+          <p>Gerade bei Altbauten und Denkmälern ist die Herausforderung besonders groß: Moderne Brandschutzanforderungen müssen mit den Auflagen des Denkmalschutzes in Einklang gebracht werden. Für solche Fälle vermitteln wir an <strong>Brandschutzingenieure</strong> mit entsprechender Spezialisierung, die gleichwertige, <strong>kostenreduktive Brandschutzlösungen</strong> entwickeln.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          Was ist eine Technical Due Diligence (TDD) im Brandschutz?
+          <span class="faq-icon"><svg width="12" height="12" viewBox="0 0 16 16" fill="currentColor"><path d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2z"/></svg></span>
+        </button>
+        <div class="faq-answer" hidden>
+          <p>Bei einer <strong>Technical Due Diligence (TDD)</strong> wird der brandschutztechnische Zustand einer Immobilie systematisch bewertet — typischerweise vor einem Kauf oder einer größeren Investitionsentscheidung. Das Ergebnis ist eine vollständige <strong>Gebäudebewertung Brandschutz</strong> mit <strong>Kostenkalkulation und Kostenschätzung</strong> für alle notwendigen Maßnahmen.</p>
+          <p>So wissen Käufer und Investoren vor Vertragsabschluss genau, welche Brandschutzkosten auf sie zukommen — und können gezielt verhandeln.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          Wann brauche ich einen externen Brandschutzbeauftragten?
+          <span class="faq-icon"><svg width="12" height="12" viewBox="0 0 16 16" fill="currentColor"><path d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2z"/></svg></span>
+        </button>
+        <div class="faq-answer" hidden>
+          <p>Ein <strong>externer Brandschutzbeauftragter</strong> ist in Betrieben mit erhöhtem Brandrisiko sowie in vielen gewerblich genutzten Gebäuden gesetzlich vorgeschrieben oder von Versicherungen gefordert. Er übernimmt dauerhaft die Verantwortung für die Umsetzung und Dokumentation aller Brandschutzmaßnahmen — und ist die Grundlage für ein funktionierendes <strong>Brandschutz-Management-System</strong> im laufenden Betrieb.</p>
+          <p>Für Mehrfamilienhäuser ist er nicht zwingend vorgeschrieben, kann aber bei komplexeren Strukturen sinnvoll sein. Wir beraten Sie, ob und in welcher Form das für Ihr Objekt relevant ist.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 <!-- ── CONTACT ── -->
 <section class="contact" id="kontakt">
   <div class="contact-inner">
@@ -1287,6 +1470,21 @@
     scrollBtn.classList.toggle('visible', window.scrollY > 400);
   });
   scrollBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+  // FAQ Accordion
+  document.querySelectorAll('.faq-question').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const isOpen = btn.getAttribute('aria-expanded') === 'true';
+      document.querySelectorAll('.faq-question').forEach(b => {
+        b.setAttribute('aria-expanded', 'false');
+        b.nextElementSibling.hidden = true;
+      });
+      if (!isOpen) {
+        btn.setAttribute('aria-expanded', 'true');
+        btn.nextElementSibling.hidden = false;
+      }
+    });
+  });
 </script>
 </body>
 </html>
