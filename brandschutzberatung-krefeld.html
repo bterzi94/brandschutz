@@ -571,6 +571,53 @@
       .float-btn span, .float-btn { font-size: 12px; }
       .floating-cta { right: 12px; bottom: 12px; }
     }
+
+    /* ─────────── VOR-ORT-BEGEHUNG ─────────── */
+    .begehung { background: var(--gray); }
+    .begehung-grid {
+      display: grid; grid-template-columns: repeat(2, 1fr);
+      gap: 20px; margin-top: 48px;
+    }
+    .begehung-card {
+      background: var(--white); border-radius: 16px;
+      border: 1px solid var(--border); padding: 28px 24px;
+      transition: box-shadow .2s, transform .2s;
+    }
+    .begehung-card:hover { box-shadow: 0 8px 32px rgba(0,24,48,.1); transform: translateY(-2px); }
+    .begehung-card--highlight {
+      border-color: rgba(240,72,24,.3); background: #fff8f6;
+    }
+    .begehung-step {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 36px; height: 36px; border-radius: 10px;
+      background: var(--orange); color: var(--white);
+      font-size: 13px; font-weight: 700; margin-bottom: 16px; flex-shrink: 0;
+    }
+    .begehung-card h3 { font-size: 16px; font-weight: 700; color: var(--navy); margin-bottom: 10px; }
+    .begehung-card p  { font-size: 14px; color: var(--muted); line-height: 1.65; }
+    .begehung-list {
+      margin: 10px 0 0 16px; display: flex; flex-direction: column; gap: 7px; padding: 0;
+    }
+    .begehung-list li { font-size: 13px; color: var(--muted); line-height: 1.5; }
+    .begehung-list li strong { color: var(--navy); }
+    .begehung-partner {
+      display: flex; flex-direction: column; gap: 10px; margin-top: 16px;
+    }
+    .partner-badge {
+      display: flex; align-items: flex-start; gap: 10px;
+      padding: 12px 14px; border-radius: 10px;
+      background: var(--white); border: 1px solid rgba(240,72,24,.2);
+    }
+    .partner-badge-icon {
+      width: 30px; height: 30px; border-radius: 8px; background: var(--orange);
+      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+    }
+    .partner-badge-icon svg { color: var(--white); }
+    .partner-badge-title { font-size: 13px; font-weight: 700; color: var(--navy); }
+    .partner-badge-desc  { font-size: 12px; color: var(--muted); line-height: 1.4; margin-top: 2px; }
+    @media (max-width: 900px) {
+      .begehung-grid { grid-template-columns: 1fr; }
+    }
   </style>
 </head>
 <body>
@@ -589,6 +636,7 @@
   <ul class="nav-links">
     <li><a href="#problem">Ihr Problem</a></li>
     <li><a href="#loesung">Unsere Lösung</a></li>
+    <li><a href="#begehung">Vor-Ort-Begehung</a></li>
     <li><a href="#ablauf">Ablauf</a></li>
     <li><a href="#kontakt">Kontakt</a></li>
   </ul>
@@ -804,6 +852,100 @@
         <a href="#kontakt" class="btn btn-orange btn-lg" style="width:100%; margin-bottom:10px;">Formular ausfüllen</a>
         <p style="text-align:center; font-size:12px; color:var(--muted);">Mo–Fr 8–18 Uhr · Sa 9–13 Uhr</p>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── VOR-ORT-BEGEHUNG ── -->
+<section class="section begehung" id="begehung">
+  <div class="section-inner">
+    <div class="section-label">Was bei der Begehung passiert</div>
+    <h2 class="section-title">So läuft Ihre Vor-Ort-Begehung in Krefeld ab</h2>
+    <p class="section-sub">
+      Wenn wir zu Ihnen kommen, gehen wir Ihr Gebäude systematisch durch — von Keller bis Dach.
+      Wir zeigen Ihnen klar, was vorliegt, was es bedeutet und welche konkreten Schritte als nächstes nötig sind.
+      Kein Fachjargon, kein Druck — nur ein ehrliches Bild Ihrer Situation.
+    </p>
+    <div class="begehung-grid">
+
+      <div class="begehung-card">
+        <div class="begehung-step">01</div>
+        <h3>Ist-Analyse der Immobilie</h3>
+        <p>
+          Wir nehmen den aktuellen Zustand Ihres Gebäudes vollständig auf — Fluchtwege, Brandabschnitte,
+          technische Ausstattung und bauliche Gegebenheiten. Ohne Vorwürfe, ohne Zeitdruck.
+          Das Ziel: ein klares Bild der Ist-Situation, bevor irgendwelche Entscheidungen getroffen werden.
+        </p>
+      </div>
+
+      <div class="begehung-card">
+        <div class="begehung-step">02</div>
+        <h3>Mängel erkennen und klar benennen</h3>
+        <p>Wir dokumentieren, was nicht den Anforderungen entspricht — und erklären Ihnen verständlich, warum das ein Problem ist. Typische Mängel, die wir regelmäßig antreffen:</p>
+        <ul class="begehung-list">
+          <li>Fehlende oder abgelaufene Feuerlöscher</li>
+          <li>Fehlende oder defekte Rauchmelder</li>
+          <li>Blockierte oder unzureichende Fluchtwege</li>
+          <li>Fehlende Brandschutztüren (T30 / T90)</li>
+          <li>Mängel an Brandabschottungen und Deckenöffnungen</li>
+          <li>Fehlende Notausgang-Kennzeichnung und Sicherheitsbeleuchtung</li>
+        </ul>
+      </div>
+
+      <div class="begehung-card">
+        <div class="begehung-step">03</div>
+        <h3>Konkrete Handlungsempfehlungen</h3>
+        <p>
+          Nach der Begehung erhalten Sie von uns eine klare Prioritätenliste:
+          Was muss sofort erledigt werden? Was hat Zeit bis wann?
+          Was ist gesetzlich vorgeschrieben — und was ist optional?
+          So investieren Sie gezielt und vermeiden teure Fehler.
+        </p>
+        <p style="margin-top:12px;">
+          Wir erklären Ihnen außerdem, welche Maßnahmen die Behörde im Rahmen Ihrer
+          Nutzungsuntersagung konkret fordert — und welche Wege realistisch sind, diese zu erfüllen.
+        </p>
+      </div>
+
+      <div class="begehung-card begehung-card--highlight">
+        <div class="begehung-step">04</div>
+        <h3>Vermittlung an die richtigen Fachleute</h3>
+        <p>Für die Umsetzung der Maßnahmen verbinden wir Sie direkt mit qualifizierten Fachleuten aus unserem Netzwerk in Krefeld und der Region. Je nach Art und Umfang Ihrer Situation:</p>
+        <div class="begehung-partner">
+          <div class="partner-badge">
+            <div class="partner-badge-icon">
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/></svg>
+            </div>
+            <div>
+              <div class="partner-badge-title">Fachplaner Brandschutz</div>
+              <div class="partner-badge-desc">Erstellen Brandschutzkonzepte, Nachweise und behördlich anerkannte Dokumentationen</div>
+            </div>
+          </div>
+          <div class="partner-badge">
+            <div class="partner-badge-icon">
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/></svg>
+            </div>
+            <div>
+              <div class="partner-badge-title">Sachverständige für vorbeugenden Brandschutz</div>
+              <div class="partner-badge-desc">Prüfen, bewerten und zertifizieren Brandschutzmaßnahmen — anerkannt von Behörden und Versicherungen</div>
+            </div>
+          </div>
+          <div class="partner-badge">
+            <div class="partner-badge-icon">
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/></svg>
+            </div>
+            <div>
+              <div class="partner-badge-title">Brandschutzingenieure</div>
+              <div class="partner-badge-desc">Für komplexe Bestandsgebäude und individuelle Lösungen abseits der Normen</div>
+            </div>
+          </div>
+        </div>
+        <p style="margin-top:16px; font-size:13px;">
+          Wir koordinieren und begleiten Sie durch den gesamten Prozess —
+          von der ersten Einschätzung bis zur abgeschlossenen Mängelbeseitigung.
+        </p>
+      </div>
+
     </div>
   </div>
 </section>
